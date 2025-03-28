@@ -1,0 +1,90 @@
+.s4main {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Quicksand", sans-serif;
+  padding-bottom: 50px;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  font-family: "Mulish", sans-serif;
+}
+
+.sub {
+  margin-left: 5%;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 5%;
+}
+
+.location {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  
+  /* Initial State for Animation */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When visible, fade in & move up */
+.location.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.location-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: black;
+  margin-bottom: 5px;
+  font-family: "Mulish", sans-serif;
+}
+
+.time {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .location {
+    width: 90%;
+  }
+
+  .location-name {
+    font-size: 1.3rem;
+  }
+
+  .time {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+
+  .time {
+    font-size: 0.9rem;
+  }
+}

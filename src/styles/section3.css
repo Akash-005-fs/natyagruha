@@ -1,0 +1,110 @@
+.s3main {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.s3main h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+}
+
+/* Team Member Styling */
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    padding: 15px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    
+    /* Initial State for Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When visible, fade in & move up */
+.team-member.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Profile Picture Styling */
+.pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Different images for team members */
+.pic1 { background-image: url(../pictures/kkm.jpg); }
+.pic2 { background-image: url(../pictures/kkm.jpg); }
+.pic3 { background-image: url(../pictures/kkm.jpg); }
+.pic4 { background-image: url(../pictures/kkm.jpg); }
+
+.team-member h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: left;
+    font-family: "Mulish", sans-serif;
+}
+
+.team-member h4 span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+    .team-member {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .s3main h1 {
+        font-size: 2rem;
+    }
+
+    .team-member {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pic {
+        height: 80px;
+        width: 80px;
+    }
+
+    .team-member h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .s3main h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .pic {
+        height: 70px;
+        width: 70px;
+    }
+
+    .team-member h4 {
+        font-size: 1.1rem;
+    }
+}
